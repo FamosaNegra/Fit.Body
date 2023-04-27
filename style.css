@@ -1,0 +1,33 @@
+body{
+    background-color: #222222;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.navbar{
+    background-color: #222222;
+}
+a{
+    color: white;
+}
+li a {
+    color: white!important;
+}
+button{
+    background-color: #1b97d2!important;
+    border: none!important;
+    color: white!important;
+    font-size: 16px!important;
+    font-weight: 800!important;
+    padding: 10px 25px!important;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 3em!important;
+    text-transform: uppercase;
+}
+.container{
+    padding: 40px 0px;
+}
