@@ -1,33 +1,123 @@
-body{
+body {
     background-color: #222222;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
-.navbar{
-    background-color: #222222;
+.navbar {
+    background-color: #222222 !important;
+    padding: 10px 0px;
+    width: 100vw;
+    max-width: 1140px;
+    margin: 0 auto;
 }
-a{
+
+a {
     color: white;
 }
+
 li a {
-    color: white!important;
+    color: white !important;
+    margin-right: 20px;
+    font-weight: 500;
 }
-button{
-    background-color: #1b97d2!important;
-    border: none!important;
-    color: white!important;
-    font-size: 16px!important;
-    font-weight: 800!important;
-    padding: 10px 25px!important;
+
+a:hover {
+    color: #1b97d2 !important;
+    transition-duration: 1s;
 }
-h1{
-    font-family: 'Roboto', sans-serif;
+
+.navbar-brand {
     font-weight: 800;
-    font-size: 3em!important;
     text-transform: uppercase;
 }
-.container{
+
+button {
+    background-color: #1b97d2 !important;
+    border: 2px solid #1b97d2 !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    padding: 10px 25px !important;
+}
+
+button:hover {
+    background-color: #222222 !important;
+    border: 2px solid #1b97d2 !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    padding: 10px 25px !important;
+    transition-duration: 1s;
+    box-shadow: 0px 5px 15px 5px #1b98d24c;
+
+
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 3em !important;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #676767;
+}
+
+.container {
     padding: 40px 0px;
+}
+
+.carousel-item {
+    transition: transform 1s ease;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    transform: translateX(0);
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right,
+.carousel-item.active.carousel-item-left {
+    transform: translateX(-100%);
+}
+
+.carousel-item-next.carousel-item-right,
+.carousel-item-prev.carousel-item-left,
+.carousel-item.active.carousel-item-right {
+    transform: translateX(100%);
+}
+
+.card {
+    background-color: #393939;
+    border: 2px solid #393939;
+    min-height: 500px;
+}
+
+.card:hover {
+    border: 2px solid #1b97d2;
+    transition-duration: 1s;
+    box-shadow: 0px 10px 15px 5px #1b98d24c;
+}
+
+.card-img-top {
+    max-width: 300px;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top: -50px;
+    margin-bottom: -20px;
+}
+
+.carousel-item img {
+    max-width: 50%;
+    margin: 0 auto;
+
+}
+
+.espaco {
+    padding: 100px 0px 100px 0px;
 }
