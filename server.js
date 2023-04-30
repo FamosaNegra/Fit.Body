@@ -5,7 +5,7 @@ const path = require('path');
 const server = http.createServer((req, res) => {
 
     // Página inicial
-    if (req.url === '/' || req.url === '/index.html') {
+    if (req.url === '/' || req.url === '/') {
         fs.readFile(path.join(__dirname, 'index.html'), (err, data) => {
             if (err) {
                 res.writeHead(500, {
