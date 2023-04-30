@@ -12,12 +12,10 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/style">
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Fit.Me</a>
@@ -40,18 +38,15 @@
                     <a class="nav-link" href="#">Link 4</a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#medidasModal">
-                        Definir medidas
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Medidas
                     </button>
                 </li>
             </ul>
         </div>
-
     </nav>
-
     <!-- Container -->
     <div class="container mt-4">
-
         <!-- Seção Esquerda -->
         <section class="row espaco">
             <div class="col-lg-6 align-middle">
@@ -68,18 +63,14 @@
                 <img src="img/1034.png" class="d-block w-100 jaco" alt="Imagem 1">
             </div>
     </div>
-
     </div>
     </section>
-
     <div class="container">
-
         <section class="row">
             <div class="col-lg-4">
                 <div class="card">
                     <img class="card-img-top" src="img/1090.png" alt="Imagem 1">
                     <img class="card-img" src="img/sombra.png" alt="Imagem 1">
-
                     <div class="card-body">
                         <h5 class="card-title">Produto 1</h5>
                         <button class="btn btn-primary"><a href="/camisapolo">comprar</a></button>
@@ -90,7 +81,6 @@
                 <div class="card">
                     <img class="card-img-top" src="img/1090.png" alt="Imagem 2">
                     <img class="card-img" src="img/sombra.png" alt="Imagem 1">
-
                     <div class="card-body">
                         <h5 class="card-title">Produto 2</h5>
                         <button class="btn btn-primary">Comprar</button>
@@ -101,48 +91,98 @@
                 <div class="card">
                     <img class="card-img-top" src="img/1853.png" alt="Imagem 2">
                     <img class="card-img" src="img/sombra.png" alt="Imagem 1">
-
                     <div class="card-body">
                         <h5 class="card-title">Produto 2</h5>
-                        <button class="btn btn-primary">Comprar</button>
+                        <button class="btn btn-primary"><a href="/short"> Comprar </a></button>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
-    </div>
-
     <!-- Modal -->
-    <div class="modal fade" id="medidasModal" tabindex="-1" role="dialog" aria-labelledby="medidasModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="medidasModalLabel">Definir medidas</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="p-5">
+                    <form action="#">
+                        <h2>Parte Superior</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Pescoço" name="pescoço">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Peito" name="peito">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Cintura" name="cintura">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Manga" name="manga">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Parte Inferior</h2>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Cintura"
+                                        name="cintura_baixo">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Quadril" name="quadril">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Coxa" name="coxa">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Comprimento"
+                                        name="comprimento">
+                                    <span class="input-group-text" id="basic-addon2">cm</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+
                 </div>
-                <div class="modal-body">
-                    <p>Conteúdo do modal aqui</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar medidas</button>
-                </div>
+
             </div>
         </div>
     </div>
     <!-- Dependência do Javascript do Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
     <!-- Código do jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
-    <script type="text/javascript" src="/script">
-    </script>
+    <script type="text/javascript" src="/script"></script>
 </body>
 
 </html>
