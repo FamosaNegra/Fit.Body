@@ -35,8 +35,20 @@ const server = http.createServer((req, res) => {
                 res.end(data);
             }
         });
-
-        // Arquivo JavaScript
+    } else if (req.url === '/camisapolo') {
+        fs.readFile(path.join(__dirname, 'produtos/camisapolo.html'), (err, data) => {
+            if (err) {
+                res.writeHead(500, {
+                    'Content-Type': 'text/plain'
+                });
+                res.end('Internal Server Error');
+            } else {
+                res.writeHead(200, {
+                    'Content-Type': 'text/html'
+                });
+                res.end(data);
+            }
+        });
     } else if (req.url === '/script') {
         fs.readFile(path.join(__dirname, 'script.js'), (err, data) => {
             if (err) {

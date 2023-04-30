@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit.Me</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Fit.Me</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 4</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#medidasModal">
+                        Definir medidas
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <img src="img/1090.png" alt="Nome do Produto" class="img-fluid">
+            </div>
+            <div class="col-md-5">
+                <h1>Polo Branca</h1>
+                <h3>Preço</h3>
+                <p>Apresentando a camisa polo branca, um clássico do guarda-roupa masculino que nunca sai de moda. Esta
+                    camisa é a escolha perfeita para homens que buscam um visual elegante e casual ao mesmo tempo.
+
+                    Fabricada com tecido de alta qualidade, a camisa polo branca é extremamente confortável e durável.
+                    Ela possui um corte slim fit, que se ajusta perfeitamente ao corpo sem apertar demais,
+                    proporcionando um caimento impecável.
+
+                    Com sua cor branca neutra e atemporal, esta camisa polo é muito versátil e pode ser combinada com
+                    praticamente qualquer outra peça do seu guarda-roupa, desde jeans até calças sociais. O colarinho
+                    dobrável e os botões na gola adicionam um toque de elegância ao visual.
+
+                    Seja para uma ocasião formal ou casual, a camisa polo branca é a escolha perfeita para homens que
+                    desejam um visual sofisticado e moderno. Adquira agora mesmo a sua camisa polo branca e experimente
+                    a elegância e o conforto que ela pode oferecer.</p>
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-secondary">P</button>
+                        <button type="button" class="btn btn-secondary">M</button>
+                        <button type="button" class="btn btn-secondary">G</button>
+                        <button type="button" class="btn btn-secondary">GG</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary">Adicionar no Carrinho</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-secondary">Comparar Medidas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tamanho</th>
+                        <th>BR</th>
+                        <th>Busto</th>
+                        <th>Comprimento</th>
+                        <th>Comprimento da Manga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S</td>
+                        <td>P</td>
+                        <td>108</td>
+                        <td>71</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>M</td>
+                        <td>112</td>
+                        <td>72.5</td>
+                        <td>21.5</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>G</td>
+                        <td>116</td>
+                        <td>74</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>GG</td>
+                        <td>120</td>
+                        <td>75.5</td>
+                        <td>22.5</td>
+                    </tr>
+                    <tr>
+                        <td>XXL</td>
+                        <td>EG</td>
+                        <td>124</td>
+                        <td>77</td>
+                        <td>23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="medidasModal" tabindex="-1" role="dialog" aria-labelledby="medidasModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="medidasModalLabel">Definir medidas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Conteúdo do modal aqui</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar medidas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dependência do Javascript do Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Código do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script type="text/javascript" src="/script">
+    </script>
+</body>
+
+</html>
