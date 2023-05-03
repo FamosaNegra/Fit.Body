@@ -72,10 +72,10 @@
                     a elegância e o conforto que ela pode oferecer.</p>
                 <div class="row mb-5">
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-secondary">P</button>
-                        <button type="button" class="btn btn-secondary">M</button>
-                        <button type="button" class="btn btn-secondary">G</button>
-                        <button type="button" class="btn btn-secondary">GG</button>
+                        <button type="button" class="btn btn-secondary" id="P">P</button>
+                        <button type="button" class="btn btn-secondary" id="M">M</button>
+                        <button type="button" class="btn btn-secondary" id="G">G</button>
+                        <button type="button" class="btn btn-secondary" id="GG">GG</button>
                     </div>
                 </div>
                 <div class="row">
@@ -83,67 +83,59 @@
                         <button type="button" class="btn btn-primary">Adicionar no Carrinho</button>
                     </div>
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-secondary">Comparar Medidas</button>
+                        <button type="button" class="btn btn-secondary" id="comparar">Comparar Medidas</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container">
-
+    <div class="container mt-5">
+        <h2 class="mb-4">Tabela de Medidas - Camisa Polo</h2>
         <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Tamanho</th>
-                        <th>BR</th>
-                        <th>Busto</th>
-                        <th>Comprimento</th>
-                        <th>Comprimento da Manga</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>S</td>
-                        <td>P</td>
-                        <td>108</td>
-                        <td>71</td>
-                        <td>21</td>
-                    </tr>
-                    <tr>
-                        <td>M</td>
-                        <td>M</td>
-                        <td>112</td>
-                        <td>72.5</td>
-                        <td>21.5</td>
-                    </tr>
-                    <tr>
-                        <td>L</td>
-                        <td>G</td>
-                        <td>116</td>
-                        <td>74</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>XL</td>
-                        <td>GG</td>
-                        <td>120</td>
-                        <td>75.5</td>
-                        <td>22.5</td>
-                    </tr>
-                    <tr>
-                        <td>XXL</td>
-                        <td>EG</td>
-                        <td>124</td>
-                        <td>77</td>
-                        <td>23</td>
-                    </tr>
-                </tbody>
-            </table>
+          <table class="table table-bordered">
+            <thead>
+                <tr>
+                  <th>Tamanho</th>
+                  <th>Pescoço</th>
+                  <th>Peitoral</th>
+                  <th>Cintura</th>
+                  <th>Manga</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>P</td>
+                  <td class="measure">38 cm</td>
+                  <td class="measure">100 cm</td>
+                  <td class="measure">94 cm</td>
+                  <td class="measure">62 cm</td>
+                </tr>
+                <tr>
+                  <td>M</td>
+                  <td class="measure">40 cm</td>
+                  <td class="measure">104 cm</td>
+                  <td class="measure">98 cm</td>
+                  <td class="measure">64 cm</td>
+                </tr>
+                <tr>
+                  <td>G</td>
+                  <td class="measure">42 cm</td>
+                  <td class="measure">108 cm</td>
+                  <td class="measure">102 cm</td>
+                  <td class="measure">66 cm</td>
+                </tr>
+                <tr>
+                  <td>GG</td>
+                  <td class="measure">44 cm</td>
+                  <td class="measure">112 cm</td>
+                  <td class="measure">106 cm</td>
+                  <td class="measure">68 cm</td>
+                </tr>
+              </tbody>
+          </table>
         </div>
-
-    </div>
+      </div>
+      
 
 
     <!-- Modal -->
