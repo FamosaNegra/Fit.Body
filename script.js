@@ -10,6 +10,10 @@ $(window).on("load", function () {
     $("input[name=quadril]").val(form_data.quadril);
     $("input[name=coxa]").val(form_data.coxa);
     $("input[name=comprimento]").val(form_data.comprimento);
+    $("input[name=nome]").val(form_data.nome);
+    $("input[name=email]").val(form_data.email);
+
+
   }
 
   // Salva os dados do formulário no localStorage quando submetido
@@ -23,11 +27,20 @@ $(window).on("load", function () {
       quadril: $("input[name=quadril]").val(),
       coxa: $("input[name=coxa]").val(),
       comprimento: $("input[name=comprimento]").val(),
+      nome: $("input[name=nome]").val(),
+      email: $("input[name=email]").val(),
     };
     localStorage.setItem("formulario", JSON.stringify(form_data));
     alert("Informações salvas com sucesso");
-    window.location.href = window.location.href;
-    return false;
+    const currentURL = window.location.href;
+
+    if (window.location.pathname === "/") {
+      window.location.href = currentURL + "home";
+      return false;
+    } else {
+      window.location.href = window.location.href;
+      return false;
+    }
   });
 
   // Adiciona o comportamento do botão de comparar medidas
