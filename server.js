@@ -50,8 +50,8 @@ const server = http.createServer((req, res) => {
             }
         });
     }
-     else if (req.url === '/camisapolo') {
-        fs.readFile(path.join(__dirname, 'produtos/camisapolo.html'), (err, data) => {
+     else if (req.url === '/blusa') {
+        fs.readFile(path.join(__dirname, 'produtos/blusa.html'), (err, data) => {
             if (err) {
                 res.writeHead(500, {
                     'Content-Type': 'text/plain'

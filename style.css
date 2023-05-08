@@ -37,7 +37,8 @@ a {
     font-weight: 800 !important;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: white;
     font-size: 16px !important;
     font-weight: 800 !important;
@@ -74,6 +75,7 @@ h1 {
     font-size: 3em !important;
     text-transform: uppercase;
 }
+
 .container {
     padding: 40px 0px;
 }
@@ -95,7 +97,7 @@ h1 {
     margin: 0 auto;
     z-index: 1;
     margin-top: -50px;
-    margin-bottom: -20px;
+    border-radius: 6px !important;
 }
 
 .card-img-top:hover {
@@ -103,7 +105,6 @@ h1 {
     margin: 0 auto;
     z-index: 1;
     margin-top: -20px;
-    margin-bottom: -20px;
     transition-duration: 2s;
 }
 
@@ -189,6 +190,12 @@ h1 {
     button {
         margin-bottom: 15px;
     }
+
+    .vertical-stepper {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
 }
 
 .nomeusuario {
@@ -257,17 +264,17 @@ h1 {
 .radio-container {
     display: flex;
     flex-direction: row;
-  }
-  
-  .radio-container label {
+}
+
+.radio-container label {
     margin-right: 10px;
-  }
-  
-  .radio-container input[type="radio"] {
+}
+
+.radio-container input[type="radio"] {
     display: none;
-  }
-  
-  .radio-container input[type="radio"] + label:before {
+}
+
+.radio-container input[type="radio"]+label:before {
     content: '';
     display: inline-block;
     border-radius: 50%;
@@ -275,14 +282,13 @@ h1 {
     height: 20px;
     margin-right: 5px;
     border: 1px solid #ccc;
-  }
-  
-  .radio-container input[type="radio"]:checked + label:before {
+}
+
+.radio-container input[type="radio"]:checked+label:before {
     background-color: #007bff;
     border-color: #007bff;
-  }
-  
-  .radio-container input[type="radio"]:focus + label:before {
+}
+
+.radio-container input[type="radio"]:focus+label:before {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-  }
-  
+}

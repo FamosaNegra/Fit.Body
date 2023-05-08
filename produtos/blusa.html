@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fit.Me</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/home">Fit.Me</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary">
+              <a href="/">Minhas Medidas</a>
+            </button>
+          </li>
+          <li class="nav-item">
+            <input
+              type="text"
+              class="form-control nomeusuario"
+              name="nome2"
+              readonly
+            />
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="https://cea.vtexassets.com/arquivos/ids/57312142-1600-auto?v=638158017815170000&width=1600&height=auto&aspect=true"
+            alt="Nome do Produto"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-6">
+          <h3>blusa de poliamida esportiva ace azul marinho</h3>
+          <h4>
+            por
+            <span class="text-primary" style="font-size: 1.5em">R$ 69,99</span>
+            à vista
+          </h4>
+          <p>
+            Blusa confeccionada em malha de poliamida. A peça possui gola redonda, mangas curtas, caimento reto e acabamento pespontado.
+
+          </p>
+          <div class="row mb-5">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-secondary" id="P">P</button>
+              <button type="button" class="btn btn-secondary" id="M">M</button>
+              <button type="button" class="btn btn-secondary" id="G">G</button>
+              <button type="button" class="btn btn-secondary" id="GG">
+                GG
+              </button>
+              <br><br>
+              <p id="paragrafo" style="display: none;">Este é o parágrafo que será exibido quando você clicar no botão Comparar.</p>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-primary">
+                Adicionar no Carrinho
+              </button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-secondary" id="comparar">
+                Comparar Medidas
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dependência do Javascript do Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Código do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script type="text/javascript" src="/script"></script>
+    <script>
+      $(window).on("load", function () {
+        $("#comparar").on("click", function () {
+          var form_data = JSON.parse(localStorage.getItem("formulario"));
+          paragrafo.style.display = 'block';
+
+
+          // Cria um objeto com as medidas da camisa polo
+          var medidas_camisa = {
+            P: {
+              torax: 84,
+              cintura: 74,
+              quadril: 102,
+            },
+            M: {
+              torax: 100,
+              cintura: 82,
+              quadril: 110,
+            },
+            G: {
+              torax: 109,
+              cintura: 92,
+              quadril: 119,
+            },
+            GG: {
+              torax: 114,
+              cintura: 98,
+              quadril: 124,
+            },
+          };
+
+          // Calcula a diferença entre as medidas da camisa e as medidas do usuário
+          var diferenca = {};
+          var menorDiferenca = Infinity;
+          var tamanhoMinimo = null;
+          for (var tamanho in medidas_camisa) {
+            var medida_camisa = medidas_camisa[tamanho];
+            diferenca[tamanho] =
+              Math.abs(medida_camisa.torax - form_data.torax) +
+              Math.abs(medida_camisa.quadril - form_data.quadril) +
+              Math.abs(medida_camisa.cintura - form_data.cintura);
+            if (diferenca[tamanho] < menorDiferenca) {
+              menorDiferenca = diferenca[tamanho];
+              tamanhoMinimo = tamanho;
+            }
+          }
+
+          // Ordena os tamanhos por ordem de adequação
+          var tamanhos = ["P", "M", "G", "GG"];
+          tamanhos.sort(function (a, b) {
+            return diferenca[a] - diferenca[b];
+          });
+
+          // Adiciona a classe adequada para cada botão de tamanho
+          for (var i = 0; i < tamanhos.length; i++) {
+            var tamanho = tamanhos[i];
+            var botao = $("#" + tamanho);
+            if (tamanho === tamanhoMinimo) {
+              botao
+                .removeClass("btn-warning btn-danger")
+                .addClass("btn-success");
+            } else {
+              var diferencaRelativa =
+                (diferenca[tamanho] / menorDiferenca) * 100;
+              if (diferencaRelativa < 2) {
+                botao
+                  .removeClass("btn-success btn-danger")
+                  .addClass("btn-warning");
+              } else {
+                botao
+                  .removeClass("btn-success btn-warning")
+                  .addClass("btn-danger");
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

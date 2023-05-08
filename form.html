@@ -4,165 +4,229 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fit.Me</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/home">Fit.Me</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <div class="input-group">
-              <input type="text" class="form-control nomeusuario" name="nome2" readonly />
+              <input
+                type="text"
+                class="form-control nomeusuario"
+                name="nome2"
+                readonly
+              />
             </div>
           </li>
-          
         </ul>
       </div>
     </nav>
 
-
     <div class="container">
       <form>
-      <div class="row d-flex flex-wrap">
-        <div class="col-12 col-md-3">
-          <div class="vertical-stepper">
-            <div class="step active">
-              <span class="step-number">1</span>
-              <p class="step-title">Passo 1</p>
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="vertical-stepper">
+              <div class="step active">
+                <span class="step-number">1</span>
+                <p class="step-title">Passo 1</p>
+              </div>
+              <div class="step">
+                <span class="step-number">2</span>
+                <p class="step-title">Passo 2</p>
+              </div>
+              <div class="step">
+                <span class="step-number">3</span>
+                <p class="step-title">Passo 3</p>
+              </div>
+              <div class="step">
+                <span class="step-number">4</span>
+                <p class="step-title">Passo 4</p>
+              </div>
             </div>
-            <div class="step">
-              <span class="step-number">2</span>
-              <p class="step-title">Passo 2</p>
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="step-content active">
+              <h3>Passo 1</h3>
+              <p>Dados pessoais</p>
+              <div class="form-group mb-3">
+                <label for="Nome">Nome completo:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nome Completo"
+                  name="nome"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="Nome">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  name="email"
+                />
+              </div>
+              <div class="radio-container mb-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genero"
+                    id="masculino"
+                    value="masculino"
+                  />
+                  <label class="form-check-label radio-label" for="masculino">
+                    Masculino
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genero"
+                    id="feminino"
+                    value="feminino"
+                  />
+                  <label class="form-check-label radio-label" for="feminino">
+                    Feminino
+                  </label>
+                </div>
+              </div>
+
+              <button class="btn btn-primary next-step">Próximo</button>
             </div>
-            <div class="step">
-              <span class="step-number">3</span>
-              <p class="step-title">Passo 3</p>
+
+            <div class="step-content">
+              <h3>Passo 2</h3>
+              <p>Medidas parte superior</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <label for="Altura" class="input-group-text">Altura:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Altura"
+                      name="altura"
+                    />
+                    <span class="input-group-text" id="basic-addon2">cm</span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <label for="Peso" class="input-group-text">Peso:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Peso"
+                      name="peso"
+                    />
+                    <span class="input-group-text" id="basic-addon2">kg</span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <label for="Idade" class="input-group-text">Idade:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Idade"
+                      name="idade"
+                    />
+                    <span class="input-group-text" id="basic-addon2">kg</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary next-step">Próximo</button>
+              <button class="btn btn-secondary prev-step">Anterior</button>
             </div>
-            <div class="step">
-              <span class="step-number">4</span>
-              <p class="step-title">Passo 4</p>
+
+            <div class="step-content">
+              <h3>Passo 3</h3>
+              <p>Medidas parte inferior</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <label for="Torax" class="input-group-text">Torax:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Torax"
+                      name="torax"
+                    />
+                    <span class="input-group-text" id="basic-addon2">cm</span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <label for="Cintura" class="input-group-text"
+                      >Cintura:</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Cintura"
+                      name="cintura"
+                    />
+                    <span class="input-group-text" id="basic-addon2">cm</span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group mb-3">
+                    <label for="Quadril" class="input-group-text"
+                      >Quadril:</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Quadril"
+                      name="quadril"
+                    />
+                    <span class="input-group-text" id="basic-addon2">cm</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary next-step">Próximo</button>
+              <button class="btn btn-secondary prev-step">Anterior</button>
+            </div>
+            <div class="step-content">
+              <h3>Concluido</h3>
+              <p>
+                Formulario completo com sucesso, clique em enviar para salvar
+                suas informações
+              </p>
+              <button type="submit" class="btn btn-primary submit">
+                Enviar
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-9">
-          <div class="step-content active">
-            <h3>Passo 1</h3>
-            <p>Dados pessoais</p>
-            <div class="form-group mb-3">
-              <label for="Nome">Nome completo:</label>
-              <input type="text" class="form-control" placeholder="Nome Completo" name="nome" />
-            </div>
-            <div class="form-group mb-3">
-              <label for="Nome">Email:</label>
-              <input type="email" class="form-control" placeholder="Email" name="email" />
-            </div>
-            <div class="radio-container mb-3">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">
-                <label class="form-check-label radio-label" for="masculino">
-                  Masculino
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="genero" id="feminino" value="feminino">
-                <label class="form-check-label radio-label" for="feminino">
-                  Feminino
-                </label>
-              </div>
-            </div>
-            
-            <button class="btn btn-primary next-step">Próximo</button>
-          </div>
-
-          <div class="step-content">
-            <h3>Passo 2</h3>
-            <p>Medidas parte superior</p>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="input-group mb-3">
-                <label for="pescoço" class="input-group-text">Pescoço:</label>
-                <input type="number" class="form-control" placeholder="Pescoço" name="pescoço" />
-                <span class="input-group-text" id="basic-addon2">cm</span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="input-group mb-3">
-                <label for="Pescoço" class="input-group-text">Pescoço:</label>
-                <input type="number" class="form-control" placeholder="Peito" name="peito" />
-                <span class="input-group-text" id="basic-addon2">cm</span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="input-group mb-3">
-                <label for="Cintura" class="input-group-text">Cintura:</label>
-                <input type="number" class="form-control" placeholder="Cintura" name="cintura" />
-                <span class="input-group-text" id="basic-addon2">cm</span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="input-group mb-3">
-                <label for="Manga" class="input-group-text">Manga:</label>
-                <input type="number" class="form-control" placeholder="Manga" name="manga" />
-                <span class="input-group-text" id="basic-addon2">cm</span>
-              </div>
-            </div>
-          </div>
-            <button class="btn btn-primary next-step">Próximo</button>
-            <button class="btn btn-secondary prev-step">Anterior</button>
-          </div>
-
-          <div class="step-content">
-            <h3>Passo 3</h3>
-            <p>Medidas parte inferior</p>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Cintura" class="input-group-text">Cintura:</label>
-                  <input type="number" class="form-control" placeholder="Cintura" name="cintura_baixo" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Quadril" class="input-group-text">Quadril:</label>
-                  <input type="number" class="form-control" placeholder="Quadril" name="quadril" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Coxa" class="input-group-text">Coxa:</label>
-                  <input type="number" class="form-control" placeholder="Coxa" name="coxa" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Comprimento" class="input-group-text">Comprimento:</label>
-                  <input type="number" class="form-control" placeholder="Comprimento" name="comprimento" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-primary next-step">Próximo</button>
-            <button class="btn btn-secondary prev-step">Anterior</button>
-          </div>
-          <div class="step-content">
-            <h3>Concluido</h3>
-            <p>Formulario completo com sucesso, clique em enviar para salvar suas informações</p>
-            <button type="submit" class="btn btn-primary submit">Enviar</button>
-          </div>
-        </div>
-      </div>
       </form>
     </div>
     <!-- Dependência do Javascript do Bootstrap -->
@@ -171,44 +235,42 @@
     <!-- Código do jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script type="text/javascript" src="/script"></script>
-    
+
     <script>
-      $(document).ready(function() {
-  $('.step:first-child').addClass('active');
-  $('.step-content:first-child').addClass('active');
+      $(document).ready(function () {
+        $(".step:first-child").addClass("active");
+        $(".step-content:first-child").addClass("active");
 
-  $('.next-step').click(function(event) {
-    event.preventDefault();
-    var currentStep = $(this).closest('.step-content');
-    var nextStep = currentStep.next('.step-content');
+        $(".next-step").click(function (event) {
+          event.preventDefault();
+          var currentStep = $(this).closest(".step-content");
+          var nextStep = currentStep.next(".step-content");
 
-    currentStep.removeClass('active');
-    nextStep.addClass('active');
+          currentStep.removeClass("active");
+          nextStep.addClass("active");
 
-    var currentNav = $('.step.active');
-    var nextNav = currentNav.next('.step');
+          var currentNav = $(".step.active");
+          var nextNav = currentNav.next(".step");
 
-    currentNav.removeClass('active');
-    nextNav.addClass('active');
-  });
+          currentNav.removeClass("active");
+          nextNav.addClass("active");
+        });
 
-  $('.prev-step').click(function(event) {
-    event.preventDefault();
-    var currentStep = $(this).closest('.step-content');
-    var prevStep = currentStep.prev('.step-content');
+        $(".prev-step").click(function (event) {
+          event.preventDefault();
+          var currentStep = $(this).closest(".step-content");
+          var prevStep = currentStep.prev(".step-content");
 
-    currentStep.removeClass('active');
-    prevStep.addClass('active');
+          currentStep.removeClass("active");
+          prevStep.addClass("active");
 
-    var currentNav = $('.step.active');
-    var prevNav = currentNav.prev('.step');
+          var currentNav = $(".step.active");
+          var prevNav = currentNav.prev(".step");
 
-    currentNav.removeClass('active');
-    prevNav.addClass('active');
-  });
-});
-
+          currentNav.removeClass("active");
+          prevNav.addClass("active");
+        });
+      });
     </script>
-
   </body>
 </html>
