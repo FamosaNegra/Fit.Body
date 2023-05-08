@@ -13,27 +13,27 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/home">Fit.Me</a>
+      <a class="navbar-brand" href="/">Fit.Me</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <div class="input-group">
-              <input type="text" class="form-control nomeusuario" name="nome2" readonly />
-            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Medidas </button>
           </li>
-          
+          <li class="nav-item">
+            <input type="text" class="form-control nomeusuario" name="nome2" readonly />
+          </li>
         </ul>
       </div>
     </nav>
 
 
     <div class="container">
-      <form>
-      <div class="row d-flex flex-wrap">
-        <div class="col-12 col-md-3">
+    
+      <div class="row">
+        <div class="col-md-3">
           <div class="vertical-stepper">
             <div class="step active">
               <span class="step-number">1</span>
@@ -53,10 +53,39 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-9">
+        <div class="col-md-9">
           <div class="step-content active">
             <h3>Passo 1</h3>
-            <p>Dados pessoais</p>
+            <p>Conteúdo do passo 1.</p>
+            <button class="btn btn-primary next-step">Próximo</button>
+          </div>
+          <div class="step-content">
+            <h3>Passo 2</h3>
+            <p>Conteúdo do passo 2.</p>
+            <button class="btn btn-primary next-step">Próximo</button>
+            <button class="btn btn-secondary prev-step">Anterior</button>
+          </div>
+          <div class="step-content">
+            <h3>Passo 3</h3>
+            <p>Conteúdo do passo 3.</p>
+            <button class="btn btn-primary next-step">Próximo</button>
+            <button class="btn btn-secondary prev-step">Anterior</button>
+          </div>
+          <div class="step-content">
+            <h3>Passo 4</h3>
+            <p>Conteúdo do passo 4.</p>
+            <button class="btn btn-secondary prev-step">Anterior</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="container">
+      <form action="#">
+        <div class="row">
+          <div class="col-md-12 p-0">
             <div class="form-group mb-3">
               <label for="Nome">Nome completo:</label>
               <input type="text" class="form-control" placeholder="Nome Completo" name="nome" />
@@ -65,104 +94,62 @@
               <label for="Nome">Email:</label>
               <input type="email" class="form-control" placeholder="Email" name="email" />
             </div>
-            <div class="radio-container mb-3">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">
-                <label class="form-check-label radio-label" for="masculino">
-                  Masculino
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="genero" id="feminino" value="feminino">
-                <label class="form-check-label radio-label" for="feminino">
-                  Feminino
-                </label>
-              </div>
-            </div>
-            
-            <button class="btn btn-primary next-step">Próximo</button>
           </div>
-
-          <div class="step-content">
-            <h3>Passo 2</h3>
-            <p>Medidas parte superior</p>
+          <h3>Parte Superior</h3>
           <div class="row">
             <div class="col-md-6">
               <div class="input-group mb-3">
-                <label for="pescoço" class="input-group-text">Pescoço:</label>
                 <input type="number" class="form-control" placeholder="Pescoço" name="pescoço" />
                 <span class="input-group-text" id="basic-addon2">cm</span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-group mb-3">
-                <label for="Pescoço" class="input-group-text">Pescoço:</label>
                 <input type="number" class="form-control" placeholder="Peito" name="peito" />
                 <span class="input-group-text" id="basic-addon2">cm</span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-group mb-3">
-                <label for="Cintura" class="input-group-text">Cintura:</label>
                 <input type="number" class="form-control" placeholder="Cintura" name="cintura" />
                 <span class="input-group-text" id="basic-addon2">cm</span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-group mb-3">
-                <label for="Manga" class="input-group-text">Manga:</label>
                 <input type="number" class="form-control" placeholder="Manga" name="manga" />
                 <span class="input-group-text" id="basic-addon2">cm</span>
               </div>
             </div>
           </div>
-            <button class="btn btn-primary next-step">Próximo</button>
-            <button class="btn btn-secondary prev-step">Anterior</button>
-          </div>
-
-          <div class="step-content">
-            <h3>Passo 3</h3>
-            <p>Medidas parte inferior</p>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Cintura" class="input-group-text">Cintura:</label>
-                  <input type="number" class="form-control" placeholder="Cintura" name="cintura_baixo" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Quadril" class="input-group-text">Quadril:</label>
-                  <input type="number" class="form-control" placeholder="Quadril" name="quadril" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Coxa" class="input-group-text">Coxa:</label>
-                  <input type="number" class="form-control" placeholder="Coxa" name="coxa" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group mb-3">
-                  <label for="Comprimento" class="input-group-text">Comprimento:</label>
-                  <input type="number" class="form-control" placeholder="Comprimento" name="comprimento" />
-                  <span class="input-group-text" id="basic-addon2">cm</span>
-                </div>
+          <h2>Parte Inferior</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Cintura" name="cintura_baixo" />
+                <span class="input-group-text" id="basic-addon2">cm</span>
               </div>
             </div>
-            <button class="btn btn-primary next-step">Próximo</button>
-            <button class="btn btn-secondary prev-step">Anterior</button>
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Quadril" name="quadril" />
+                <span class="input-group-text" id="basic-addon2">cm</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Coxa" name="coxa" />
+                <span class="input-group-text" id="basic-addon2">cm</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Comprimento" name="comprimento" />
+                <span class="input-group-text" id="basic-addon2">cm</span>
+              </div>
+            </div>
           </div>
-          <div class="step-content">
-            <h3>Concluido</h3>
-            <p>Formulario completo com sucesso, clique em enviar para salvar suas informações</p>
-            <button type="submit" class="btn btn-primary submit">Enviar</button>
-          </div>
-        </div>
-      </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </div>
     <!-- Dependência do Javascript do Bootstrap -->
@@ -171,14 +158,13 @@
     <!-- Código do jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script type="text/javascript" src="/script"></script>
-    
     <script>
-      $(document).ready(function() {
+
+$(document).ready(function() {
   $('.step:first-child').addClass('active');
   $('.step-content:first-child').addClass('active');
 
-  $('.next-step').click(function(event) {
-    event.preventDefault();
+  $('.next-step').click(function() {
     var currentStep = $(this).closest('.step-content');
     var nextStep = currentStep.next('.step-content');
 
@@ -192,8 +178,7 @@
     nextNav.addClass('active');
   });
 
-  $('.prev-step').click(function(event) {
-    event.preventDefault();
+  $('.prev-step').click(function() {
     var currentStep = $(this).closest('.step-content');
     var prevStep = currentStep.prev('.step-content');
 
@@ -208,7 +193,7 @@
   });
 });
 
-    </script>
 
+    </script>
   </body>
 </html>

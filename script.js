@@ -1,47 +1,51 @@
 $(window).on("load", function () {
   // Preenche o formulário com os dados salvos, se existirem
-  if (localStorage.getItem("formulario")) {
-    var form_data = JSON.parse(localStorage.getItem("formulario"));
-    $("input[name=pescoço]").val(form_data.pescoço);
-    $("input[name=peito]").val(form_data.peito);
-    $("input[name=cintura]").val(form_data.cintura);
-    $("input[name=manga]").val(form_data.manga);
-    $("input[name=cintura_baixo]").val(form_data.cintura_baixo);
-    $("input[name=quadril]").val(form_data.quadril);
-    $("input[name=coxa]").val(form_data.coxa);
-    $("input[name=comprimento]").val(form_data.comprimento);
-    $("input[name=nome]").val(form_data.nome);
-    $("input[name=email]").val(form_data.email);
+ // Preenche o formulário com os dados salvos, se existirem
+if (localStorage.getItem("formulario")) {
+  var form_data = JSON.parse(localStorage.getItem("formulario"));
+  $("input[name=pescoço]").val(form_data.pescoço);
+  $("input[name=peito]").val(form_data.peito);
+  $("input[name=cintura]").val(form_data.cintura);
+  $("input[name=manga]").val(form_data.manga);
+  $("input[name=cintura_baixo]").val(form_data.cintura_baixo);
+  $("input[name=quadril]").val(form_data.quadril);
+  $("input[name=coxa]").val(form_data.coxa);
+  $("input[name=comprimento]").val(form_data.comprimento);
+  $("input[name=nome]").val(form_data.nome);
+  $("input[name=nome2]").val(form_data.nome);
+  $("input[name=email]").val(form_data.email);
+  $("input[name=genero][value='" + form_data.genero + "']").prop('checked', true); // adicionado
+}
 
+// Salva os dados do formulário no localStorage quando submetido
+$("form").on("submit", function (event) {
+  event.preventDefault();
+  var form_data = {
+    pescoço: $("input[name=pescoço]").val(),
+    peito: $("input[name=peito]").val(),
+    cintura: $("input[name=cintura]").val(),
+    manga: $("input[name=manga]").val(),
+    cintura_baixo: $("input[name=cintura_baixo]").val(),
+    quadril: $("input[name=quadril]").val(),
+    coxa: $("input[name=coxa]").val(),
+    comprimento: $("input[name=comprimento]").val(),
+    nome: $("input[name=nome]").val(),
+    email: $("input[name=email]").val(),
+    genero: $("input[name=genero]:checked").val(), // adicionado
+  };
+  localStorage.setItem("formulario", JSON.stringify(form_data));
+  alert("Informações salvas com sucesso");
+  const currentURL = window.location.href;
 
+  if (window.location.pathname === "/") {
+    window.location.href = currentURL + "home";
+    return false;
+  } else {
+    window.location.href = window.location.href;
+    return false;
   }
+});
 
-  // Salva os dados do formulário no localStorage quando submetido
-  $("form").on("submit", function () {
-    var form_data = {
-      pescoço: $("input[name=pescoço]").val(),
-      peito: $("input[name=peito]").val(),
-      cintura: $("input[name=cintura]").val(),
-      manga: $("input[name=manga]").val(),
-      cintura_baixo: $("input[name=cintura_baixo]").val(),
-      quadril: $("input[name=quadril]").val(),
-      coxa: $("input[name=coxa]").val(),
-      comprimento: $("input[name=comprimento]").val(),
-      nome: $("input[name=nome]").val(),
-      email: $("input[name=email]").val(),
-    };
-    localStorage.setItem("formulario", JSON.stringify(form_data));
-    alert("Informações salvas com sucesso");
-    const currentURL = window.location.href;
-
-    if (window.location.pathname === "/") {
-      window.location.href = currentURL + "home";
-      return false;
-    } else {
-      window.location.href = window.location.href;
-      return false;
-    }
-  });
 
   // Adiciona o comportamento do botão de comparar medidas
   $("#comparar").on("click", function () {
