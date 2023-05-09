@@ -14,6 +14,10 @@ $(window).on("load", function () {
     $("input[name=nome]").val(form_data.nome);
     $("input[name=nome2]").val(form_data.nome);
     $("input[name=email]").val(form_data.email);
+    $("input[name=Ombro]").val(form_data.ombro);
+    $("input[name=Braço]").val(form_data.braço);
+    $("input[name=Biceps]").val(form_data.biceps);
+    $("input[name=Busto]").val(form_data.busto);
     $("input[name=genero][value='" + form_data.genero + "']").prop(
       "checked",
       true
@@ -34,6 +38,10 @@ $(window).on("load", function () {
       comprimento: $("input[name=comprimento]").val(),
       nome: $("input[name=nome]").val(),
       email: $("input[name=email]").val(),
+      ombro: $("input[name=Ombro]").val(),
+      braço: $("input[name=Braço]").val(),
+      biceps: $("input[name=Biceps]").val(),
+      busto: $("input[name=Busto]").val(),
       genero: $("input[name=genero]:checked").val(), // adicionado
     };
     localStorage.setItem("formulario", JSON.stringify(form_data));
