@@ -66,7 +66,7 @@ button:hover {
     font-weight: 800 !important;
     padding: 10px 25px !important;
     transition-duration: 1s;
-    box-shadow: 0px 5px 15px 5px #1b98d24c;
+    box-shadow: 0px 5px 15px 5px  rgba(255, 0, 0, 0.5);;
 }
 
 h1 {
@@ -87,9 +87,9 @@ h1 {
 }
 
 .card:hover {
-    border: 2px solid #1b97d2;
+    border: 2px solid #d21b1b;
     transition-duration: 1s;
-    box-shadow: 0px 10px 15px 5px #1b98d24c;
+    box-shadow: 0px 10px 15px 5px  rgba(255, 0, 0, 0.5);;
 }
 
 .card-img-top {
@@ -150,7 +150,7 @@ h1 {
 
 .modal-content {
     background: black;
-    border: 2px solid #1b97d2;
+    border: 2px solid #d21b1b;
 }
 
 .modal-header,
@@ -227,7 +227,7 @@ h1 {
 }
 
 .step.active .step-number {
-    background-color: #007bff;
+    background-color: #d21b1b;
     color: #fff;
 }
 
@@ -242,7 +242,7 @@ h1 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid #007bff;
+    border: 2px solid #d21b1b;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -287,10 +287,15 @@ h1 {
 }
 
 .radio-container input[type="radio"]:checked+label:before {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #d21b1b;
+    border-color: #d21b1b;
 }
-
+.text-primary{
+    color: #d21b1b!important;
+}
 .radio-container input[type="radio"]:focus+label:before {
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.5);
+}
+.card-body button{
+    background: #d21b1b!important;
 }
