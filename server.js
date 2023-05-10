@@ -62,9 +62,58 @@ const server = http.createServer((req, res) => {
         res.end(data);
       }
     });
+  } else if (req.url === "/blusa2") {
+    fs.readFile(path.join(__dirname, "produtos/blusa2.html"), (err, data) => {
+      if (err) {
+        res.writeHead(500, {
+          "Content-Type": "text/plain",
+        });
+        res.end("Internal Server Error");
+      } else {
+        res.writeHead(200, {
+          "Content-Type": "text/html",
+        });
+        res.end(data);
+      }
+    });
   } else if (req.url === "/calcajeans") {
     fs.readFile(
       path.join(__dirname, "produtos/calcajeans.html"),
+      (err, data) => {
+        if (err) {
+          res.writeHead(500, {
+            "Content-Type": "text/plain",
+          });
+          res.end("Internal Server Error");
+        } else {
+          res.writeHead(200, {
+            "Content-Type": "text/html",
+          });
+          res.end(data);
+        }
+      }
+    );
+  } else if (req.url === "/calcajeans2") {
+    fs.readFile(
+      path.join(__dirname, "produtos/calcajeans2.html"),
+      (err, data) => {
+        if (err) {
+          res.writeHead(500, {
+            "Content-Type": "text/plain",
+          });
+          res.end("Internal Server Error");
+        } else {
+          res.writeHead(200, {
+            "Content-Type": "text/html",
+          });
+          res.end(data);
+        }
+      }
+    );
+
+  } else if (req.url === "/shortjeans") {
+    fs.readFile(
+      path.join(__dirname, "produtos/shortjeans.html"),
       (err, data) => {
         if (err) {
           res.writeHead(500, {
@@ -96,6 +145,24 @@ const server = http.createServer((req, res) => {
         }
       }
     );
+    
+  } else if (req.url === "/shortsarja") {
+    fs.readFile(
+      path.join(__dirname, "produtos/shortsarja.html"),
+      (err, data) => {
+        if (err) {
+          res.writeHead(500, {
+            "Content-Type": "text/plain",
+          });
+          res.end("Internal Server Error");
+        } else {
+          res.writeHead(200, {
+            "Content-Type": "text/html",
+          });
+          res.end(data);
+        }
+      }
+    );
   } else if (req.url === "/script") {
     fs.readFile(path.join(__dirname, "script.js"), (err, data) => {
       if (err) {
@@ -110,7 +177,20 @@ const server = http.createServer((req, res) => {
         res.end(data);
       }
     });
-
+  } else if (req.url === "/navbar") {
+    fs.readFile(path.join(__dirname, "navbar.html"), (err, data) => {
+      if (err) {
+        res.writeHead(500, {
+          "Content-Type": "text/plain",
+        });
+        res.end("Internal Server Error");
+      } else {
+        res.writeHead(200, {
+          "Content-Type": "text/html",
+        });
+        res.end(data);
+      }
+    });
     // Rota desconhecida
   } else if (req.url.startsWith("/img/")) {
     const imgPath = path.join(__dirname, req.url);
